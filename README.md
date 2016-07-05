@@ -39,7 +39,8 @@ following table:
 ## Bugs
 
 * `width_of` doesn't correctly count combining characters.
-* 32bit Unicode glyphs (those from the 'Astral Planes') may be split by `to_width`:
+* 32bit Unicode glyphs (those from the 'Astral Planes') may be split by `to_width`, and combining
+  diacritics may get lost:
 
 ```
 '#' + ( to_width 'abcdabcd', 4 ) + '#' # --> #abc…#
