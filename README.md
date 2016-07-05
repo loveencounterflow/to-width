@@ -28,13 +28,13 @@ deal with `string.length`, encodings and buffers in JavaScript will enjoy the
 following table:
 
 
-| `string`                         | `string.length` | `Buffer.byteLength` | `width_of` |
-| :--------:                       | :--------:      | :--------:          | :--------: |
-| `'abcd'`                         | 4     ✅         | 4    ✅              | 4   ✅      |
-| `'äöüß'`                         | 4     ✅         | 8    ❌              | 4   ✅      |
-| `'a ̈o ̈u ̈ß'` | 7     ✅         | 11    ❌             | 7   ✅      |
-| `'北京'`                         | 2     (✅)       | 6    ❌              | 4   ✅      |
-| `'𪜀𪜁'`                           | 4   ❌           | 8  ❌                | 4 ✅        |
+| `string`                              | `string.length` | `Buffer.byteLength` | `width_of` |
+| :--------:                            | :--------:      | :--------:          | :--------: |
+| `'abcd'`                              | 4     ✅         | 4    ✅              | 4   ✅      |
+| `'äöüß'`                              | 4     ✅         | 8    ❌              | 4   ✅      |
+| `'äöüß'` (using combining diacritics) | 7     ❌         | 11    ❌             | 7   ❌      |
+| `'北京'`                              | 2     (✅)       | 6    ❌              | 4   ✅      |
+| `'𪜀𪜁'`                                | 4   ❌           | 8  ❌                | 4 ✅        |
 
 
 
