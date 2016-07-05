@@ -1,0 +1,44 @@
+{
+  "name": "to-width",
+  "version": "1.0.0",
+  "description": "The essential building block for command line tables: truncate & pad strings to given width, taking casre of wide characters, accents and ANSI colors",
+  "main": "lib/main.js",
+  "scripts": {
+    "build": "coffee --map -o lib -c src",
+    "push": "git add . && git commit -m'update' && git push",
+    "pub": "npm run build && doctoc README.md && npm run push && npm version patch && npm publish",
+    "test-travis": "node lib/tests.js",
+    "test": "npm run build && node lib/tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loveencounterflow/to-width.git"
+  },
+  "keywords": [
+    "text",
+    "leftpad",
+    "left-pad",
+    "truncate",
+    "pad",
+    "wide characters",
+    "combining characters",
+    "cli",
+    "command line",
+    "terminal",
+    "table",
+    "wrap",
+    "CJK"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loveencounterflow/to-width/issues"
+  },
+  "homepage": "https://github.com/loveencounterflow/to-width",
+  "dependencies": {
+    "cnd": "^3.2.0"
+  },
+  "devDependencies": {
+    "guy-test": "^1.2.1"
+  }
+}
