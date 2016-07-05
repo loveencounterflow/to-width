@@ -74,6 +74,12 @@ test                      = require 'guy-test'
   info 'a\u0308o\u0308u\u0308ß', ( 'a\u0308o\u0308u\u0308ß'.length ), ( Buffer.byteLength 'a\u0308o\u0308u\u0308ß' ), ( width_of 'a\u0308o\u0308u\u0308ß' )
   info '北京', ( '北京'.length ), ( Buffer.byteLength '北京' ), ( width_of '北京' )
   info '𪜀𪜁', ( '𪜀𪜁'.length ), ( Buffer.byteLength '𪜀𪜁' ), ( width_of '𪜀𪜁' )
+  info()
+  info 'abcd',                   '#' + ( to_width 'abcdabcd',                   4 ) + '#'
+  info 'äöüß',                   '#' + ( to_width 'äöüßäöüß',                   4 ) + '#'
+  info 'a\u0308o\u0308u\u0308ß', '#' + ( to_width 'a\u0308o\u0308u\u0308ßa\u0308o\u0308u\u0308ß', 4 ) + '#'
+  info '北京',                     '#' + ( to_width '北京北京',                     4 ) + '#'
+  info '𪜀𪜁',                     '#' + ( to_width '𪜀𪜁𪜀𪜁',                     4 ) + '#'
   done()
 
 #===========================================================================================================

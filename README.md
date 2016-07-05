@@ -32,11 +32,22 @@ following table:
 | --------:                            | :--------:      | :--------:          | :--------: |
 | `'abcd'`                              | 4     ✅         | 4    ✅              | 4   ✅      |
 | `'äöüß'`                              | 4     ✅         | 8    ❌              | 4   ✅      |
-| `'äöüß'` (using combining diacritics) | 7     ❌         | 11    ❌             | 7   ❌      |
+| `'äöüß'` (using combining diacritics) | 7     (✅)         | 11    ❌             | 7   ❌      |
 | `'北京'`                              | 2     (✅)       | 6    ❌              | 4   ✅      |
 | `'𪜀𪜁'`                                | 4   ❌           | 8  ❌                | 4 ✅        |
 
+## Bugs
 
+* `width_of` doesn't correctly count combining characters.
+* 32bit Unicode glyphs (those from the 'Astral Planes') may be split by `to_width`:
+
+```
+'#' + ( to_width 'abcdabcd', 4 ) + '#' # --> #abc…#
+'#' + ( to_width 'äöüßäöüß', 4 ) + '#' # --> #äöü…#
+'#' + ( to_width 'äöüßäöüß', 4 ) + '#' # --> #äöu…#
+'#' + ( to_width '北京北京', 4 ) + '#' # --> #北……#
+'#' + ( to_width '𪜀𪜁𪜀𪜁', 4 ) + '#' # --> #𪜀�…#
+```
 
 
 ## Why?
