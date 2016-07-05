@@ -15,16 +15,45 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
+## Usage
+
+```coffee
+{ to_width, width_of, } = require 'to-width'
+```
+
+```coffee
+string          string.length   Buffer.byteLength   width_of
+'abcd'                4                4               4
+'äöüß'                4                8               4
+'北京'                  2                6               4
+'𪜀𪜁'                  4                8               4
+```
 
 ## Why?
 
-Because I need tabular data display on the command line and was dissatisfied
+When I needed tabular data display on the command line, I got dissatisfied
 with existing solutions. There are some promising modules for doing this on
-[npm](http://npmjs.org), but nothing that satisfied me in the end. I then
-realized that the key requirement for doing tables in the terminal is the
-ability to format data so that each chunk of text (that you build table cells
-with) has exactly the correct visual width.
+[npm](https://www.npmjs.com/search?q=table), but nothing satisfied me in the end.
 
+I realized that the key requirement for doing tables in the terminal is the
+ability to format data so that each chunk of text (that you build table cells
+with) has exactly the correct visual width. Actually, string length fitting
+seems to have become quite the rage among people these days, at least judging by
+the recent [left-pad](https://www.npmjs.com/package/left-pad) hype.
+
+## How?
+
+The core functionality of this module has been implemented using
+
+* https://github.com/sindresorhus/string-width
+* https://github.com/martinheidegger/wcstring
+
+These two modules do the heavy lifting (looking for wide characters, combining characters, and
+ANSI color codes); `to-width` does only a little bit of glueing (and <strike>fixing<strike>
+providing a workaround for a minor bug in `wcstring`).
+
+
+<!--
 In programming languages and fixed-width displays, there are at least three meaningful measures of text 'length':
 
 * **Length**—How many code units are used by a given programming language? In
@@ -47,16 +76,12 @@ points.
   Strictly speaking, we can only find out by this must ignore color codes and
   take CJK &c. into account; also, it should support [combining
   characters](https://en.wikipedia.org/wiki/Combining_character)
+ -->
 
 
-## Dependencies
+## Similar
 
-The functionality of this module has been implemented using
-
-* https://github.com/sindresorhus/string-width and
-* https://github.com/martinheidegger/wcstring;
-
-these packages have also been considered:
+These packages have also been considered:
 
 * https://github.com/chalk/strip-ansi
 * https://github.com/chalk/ansi-styles
