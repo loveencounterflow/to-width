@@ -5,13 +5,21 @@
 **The essential building block for command line tables: truncate & pad strings
 to given width, taking care of wide characters, accents and ANSI colors.**
 
+## Why?
+
+Because I need tabular data display on the command line and was dissatisfied
+with existing solutions. There are some promising modules for doing this on
+[npm](http://npmjs.org), but nothing that satisfied me in the end. I then
+realized that the key requirement for doing tables in the terminal is the
+ability to format data so that each chunk of text (that you build table cells
+with) has exactly the correct visual width.
 
 In programming languages and fixed-width displays, there are at least three meaningful measures of text 'length':
 
 * **Length**—How many code units are used by a given programming language? In
   JavaScript, this measure is obtained by retrieving the value of `text.length`,
   and indeed, this is often used to implement simple-minded string truncation
-  and padding when lines of constant length are desired.
+  and padding when lines of constant length are desired. Be it said that the only two justifications for considering `text.length`
 
 * **Size**—How long a string is under some special interpretation of its contents; for example, the string
 `'a&#98x;c'` has a length of 8, but a size of 3 when NCRs are rendered as their corresponding code
