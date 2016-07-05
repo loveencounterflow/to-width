@@ -73,7 +73,7 @@ The core functionality of this module has been implemented using
 * https://github.com/martinheidegger/wcstring
 
 These two modules do the heavy lifting (looking for wide characters, combining characters, and
-ANSI color codes); `to-width` does only a little bit of glueing (and <strike>fixing<strike>
+ANSI color codes); `to-width` does only a little bit of glueing (and <strike>fixing</strike>
 providing a workaround for a minor bug in `wcstring`).
 
 
