@@ -28,8 +28,8 @@ deal with `string.length`, encodings and buffers in JavaScript will enjoy the
 following table:
 
 
-| `string`                              | `string.length` | `Buffer.byteLength` | `width_of` |
-| :--------:                            | :--------:      | :--------:          | :--------: |
+| `string`                              | `string.length` | `Buffer.byteLength string` | `width_of string` |
+| --------:                            | :--------:      | :--------:          | :--------: |
 | `'abcd'`                              | 4     ✅         | 4    ✅              | 4   ✅      |
 | `'äöüß'`                              | 4     ✅         | 8    ❌              | 4   ✅      |
 | `'äöüß'` (using combining diacritics) | 7     ❌         | 11    ❌             | 7   ❌      |
