@@ -9,9 +9,11 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [To-Width](#to-width)
+- [Usage](#usage)
+- [Bugs](#bugs)
 - [Why?](#why)
-- [Dependencies](#dependencies)
+- [How?](#how)
+- [Similar](#similar)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
