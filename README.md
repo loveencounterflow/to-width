@@ -21,12 +21,12 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 { to_width, width_of, } = require 'to-width'
 ```
 
-| string     | string.length | Buffer.byteLength | width_of   |
+| `string`     | `string.length` | `Buffer.byteLength` | `width_of`   |
 | :--------: | :--------:    | :--------:        | :--------: |
-| `'abcd'`   | 4             | 4                 | 4          |
-| `'äöüß'`   | 4             | 8                 | 4          |
-| `'北京'`   | 2             | 6                 | 4          |
-| `'𪜀𪜁'`     | 4             | 8                 | 4          |
+| `'abcd'`   | 4             | 4                 | 4   ✔       |
+| `'äöüß'`   | 4             | 8                 | 4   ✔       |
+| `'北京'`   | 2             | 6                 | 4   ✔       |
+| `'𪜀𪜁'`     | 4             | 8                 | 4 ✔         |
 
 
 
