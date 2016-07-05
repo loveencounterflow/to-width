@@ -4,7 +4,7 @@
 ############################################################################################################
 CND                       = require 'cnd'
 rpr                       = CND.rpr.bind CND
-badge                     = 'STREAMING-TABLES'
+badge                     = 'TO-WIDTH'
 log                       = CND.get_logger 'plain',     badge
 info                      = CND.get_logger 'info',      badge
 whisper                   = CND.get_logger 'whisper',   badge
@@ -16,9 +16,8 @@ urge                      = CND.get_logger 'urge',      badge
 echo                      = CND.echo.bind CND
 #...........................................................................................................
 # probes                    = require './probes'
-_width_of_string          = require 'string-width'
-_truncate                 = require 'cli-truncate'
-_Wcstring                 = require 'wcstring'
+@_width_of_string         = require 'string-width'
+@_Wcstring                = require 'wcstring'
 
 
 #-----------------------------------------------------------------------------------------------------------
@@ -34,7 +33,7 @@ _Wcstring                 = require 'wcstring'
   #.........................................................................................................
   if old_width > ( width_1 = width - 1)
     ### `WCString` occasionally is off by one, so here we fix that: ###
-    R = ( new _Wcstring me ).truncate width_1, ''
+    R = ( new @_Wcstring me ).truncate width_1, ''
     R += ellipsis + if ( ( @width_of R ) < width_1 ) then ellipsis else ''
   #.........................................................................................................
   else
@@ -43,7 +42,7 @@ _Wcstring                 = require 'wcstring'
   return R
 
 #-----------------------------------------------------------------------------------------------------------
-@width_of = ( me ) => _width_of_string me
+@width_of = ( me ) => @_width_of_string me
 
 
 
