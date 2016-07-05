@@ -6,12 +6,12 @@
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
 - [To-Width](#to-width)
-  - [Why?](#why)
-    - [Dependencies](#dependencies)
+- [Why?](#why)
+- [Dependencies](#dependencies)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# To-Width
+## To-Width
 
 **The essential building block for command line tables: truncate & pad strings
 to given width, taking care of wide characters, accents and ANSI colors.**
@@ -49,7 +49,7 @@ points.
   characters](https://en.wikipedia.org/wiki/Combining_character)
 
 
-### Dependencies
+## Dependencies
 
 The functionality of this module has been implemented using
 
