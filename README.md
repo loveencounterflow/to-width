@@ -29,13 +29,6 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 | `'𪜀𪜁'`     | 4   ❌           | 8  ❌                | 4 ✅        |
 
 
-&#x237B; ⍻ not check mark
-&#x2610; ☐ ballot box
-&#x2611; ☑ ballot box with check (GREEN)
-&#x2705; ✅ white heavy check mark
-&#x2713; ✓ check mark
-&#x2714; ✔ heavy check mark (GREEN)
-&#x2716;
 
 
 
