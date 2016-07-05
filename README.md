@@ -23,10 +23,10 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 
 | `string`   | `string.length` | `Buffer.byteLength` | `width_of` |
 | :--------: | :--------:      | :--------:          | :--------: |
-| `'abcd'`   | 4     ✔         | 4    ✔              | 4   ✔      |
-| `'äöüß'`   | 4     ✔         | 8    <span style='color:red'>✘</span>              | 4   ✔      |
-| `'北京'`   | 2     (✔)       | 6    <span style='color:red'>✘</span>              | 4   ✔      |
-| `'𪜀𪜁'`     | 4   <span style='color:red'>✘</span>           | 8  <span style='color:red'>✘</span>                | 4 ✔        |
+| `'abcd'`   | 4     ✅         | 4    ✅              | 4   ✅      |
+| `'äöüß'`   | 4     ✅         | 8    ❌              | 4   ✅      |
+| `'北京'`   | 2     (✅)       | 6    ❌              | 4   ✅      |
+| `'𪜀𪜁'`     | 4   ❌           | 8  ❌                | 4 ✅        |
 
 
 
