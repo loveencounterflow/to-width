@@ -21,13 +21,20 @@ to given width, taking care of wide characters, accents and ANSI colors.**
 { to_width, width_of, } = require 'to-width'
 ```
 
-| `string`   | `string.length` | `Buffer.byteLength` | `width_of` |
-| :--------: | :--------:      | :--------:          | :--------: |
-| `'abcd'`   | 4     ✅         | 4    ✅              | 4   ✅      |
-| `'äöüß'`   | 4     ✅         | 8    ❌              | 4   ✅      |
-| `'北京'`   | 2     (✅)       | 6    ❌              | 4   ✅      |
-| `'𪜀𪜁'`     | 4   ❌           | 8  ❌                | 4 ✅        |
+`width_of` is provided by
+[sindresorhus/string-width](https://github.com/sindresorhus/string-width); it provides a fairly
+reliable way to determine the width of strings on character devices. All people who
+deal with `string.length`, encodings and buffers in JavaScript will enjoy the
+following table:
 
+
+| `string`                         | `string.length` | `Buffer.byteLength` | `width_of` |
+| :--------:                       | :--------:      | :--------:          | :--------: |
+| `'abcd'`                         | 4     ✅         | 4    ✅              | 4   ✅      |
+| `'äöüß'`                         | 4     ✅         | 8    ❌              | 4   ✅      |
+| `'a&#x0308;o&#x0308;u&#x0308;ß'` | 7     ✅         | 11    ❌             | 7   ✅      |
+| `'北京'`                         | 2     (✅)       | 6    ❌              | 4   ✅      |
+| `'𪜀𪜁'`                           | 4   ❌           | 8  ❌                | 4 ✅        |
 
 
 

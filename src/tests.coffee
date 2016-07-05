@@ -71,7 +71,7 @@ test                      = require 'guy-test'
 @[ "demo 2" ] = ( T, done ) ->
   info 'abcd', ( 'abcd'.length ), ( Buffer.byteLength 'abcd' ), ( width_of 'abcd' )
   info 'äöüß', ( 'äöüß'.length ), ( Buffer.byteLength 'äöüß' ), ( width_of 'äöüß' )
-  info 'a&#308;o&#308;u&#308;ß', ( 'a&#308;o&#308;u&#308;ß'.length ), ( Buffer.byteLength 'a&#308;o&#308;u&#308;ß' ), ( width_of 'a&#308;o&#308;u&#308;ß' )
+  info 'a\u0308o\u0308u\u0308ß', ( 'a\u0308o\u0308u\u0308ß'.length ), ( Buffer.byteLength 'a\u0308o\u0308u\u0308ß' ), ( width_of 'a\u0308o\u0308u\u0308ß' )
   info '北京', ( '北京'.length ), ( Buffer.byteLength '北京' ), ( width_of '北京' )
   info '𪜀𪜁', ( '𪜀𪜁'.length ), ( Buffer.byteLength '𪜀𪜁' ), ( width_of '𪜀𪜁' )
   done()
