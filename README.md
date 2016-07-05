@@ -1,3 +1,7 @@
+## To-Width
+
+**The essential building block for command line tables: truncate & pad strings
+to given width, taking care of wide characters, accents and ANSI colors.**
 
 ![](https://github.com/loveencounterflow/to-width/raw/master/art/Screen%20Shot%202016-07-05%20at%2016.44.59.png)
 
@@ -11,10 +15,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## To-Width
-
-**The essential building block for command line tables: truncate & pad strings
-to given width, taking care of wide characters, accents and ANSI colors.**
 
 ## Why?
 
