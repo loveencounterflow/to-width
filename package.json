@@ -1,6 +1,6 @@
 {
   "name": "to-width",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The essential building block for command line tables: truncate & pad strings to given width, taking care of wide characters, accents and ANSI colors",
   "main": "lib/main.js",
   "scripts": {
