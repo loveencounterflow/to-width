@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "main.js",
-  "sourceRoot": "..",
+  "sourceRoot": "../../to-width",
   "sources": [
     "src/main.coffee"
   ],
