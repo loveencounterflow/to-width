@@ -36,11 +36,11 @@
   },
   "homepage": "https://github.com/loveencounterflow/to-width",
   "dependencies": {
-    "cnd": "^4.0.5",
-    "string-width": "^1.0.1",
+    "cnd": "^5.3.2",
+    "string-width": "^4.2.0",
     "wcstring": "^2.1.1"
   },
   "devDependencies": {
-    "guy-test": "^1.2.3"
+    "guy-test": "^2.0.1"
   }
 }
