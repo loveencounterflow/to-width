@@ -1,56 +1,73 @@
-lockfileVersion: 5.3
+lockfileVersion: '9.0'
 
-specifiers:
-  string-width: 4.2.3
-  wcstring: ^2.1.1
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
-dependencies:
-  string-width: 4.2.3
-  wcstring: 2.1.1
+importers:
+
+  .:
+    dependencies:
+      string-width:
+        specifier: 7.2.0
+        version: 7.2.0
+      wcstring:
+        specifier: ^2.1.1
+        version: 2.1.1
 
 packages:
 
-  /ansi-regex/5.0.1:
-    resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
-    engines: {node: '>=8'}
-    dev: false
+  ansi-regex@6.1.0:
+    resolution: {integrity: sha512-7HSX4QQb4CspciLpVFwyRe79O3xsIZDDLER21kERQ71oaPodF8jL725AgJMFAYbooIqolJoRLuM81SpeUkpkvA==}
+    engines: {node: '>=12'}
 
-  /emoji-regex/8.0.0:
-    resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
-    dev: false
+  emoji-regex@10.4.0:
+    resolution: {integrity: sha512-EC+0oUMY1Rqm4O6LLrgjtYDvcVYTy7chDnM4Q7030tP4Kwj3u/pR6gP9ygnp2CJMK5Gq+9Q2oqmrFJAz01DXjw==}
 
-  /is-fullwidth-code-point/3.0.0:
-    resolution: {integrity: sha512-zymm5+u+sCsSWyD9qNaejV3DFvhCKclKdizYaJUuHA83RLjb7nSuGnddCHGv0hk+KY7BMAlsWeK4Ueg6EV6XQg==}
-    engines: {node: '>=8'}
-    dev: false
+  get-east-asian-width@1.3.0:
+    resolution: {integrity: sha512-vpeMIQKxczTD/0s2CdEWHcb0eeJe6TFjxb+J5xgX7hScxqrGuyjmv4c1D4A/gelKfyox0gJJwIHF+fLjeaM8kQ==}
+    engines: {node: '>=18'}
 
-  /string-width/4.2.3:
-    resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
-    engines: {node: '>=8'}
+  string-width@7.2.0:
+    resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
+    engines: {node: '>=18'}
+
+  strip-ansi@7.1.0:
+    resolution: {integrity: sha512-iq6eVVI64nQQTRYq2KtEg2d2uU7LElhTJwsH4YzIHZshxlgZms/wIc4VoDQTlG/IvVIrBKG06CrZnp0qv7hkcQ==}
+    engines: {node: '>=12'}
+
+  varsize-string@2.2.2:
+    resolution: {integrity: sha512-Wuq8/cNzDSWYYQ1KlTk6IyGrRJOMU1YX21RSgEl3psbAGdExTBOIDWd80Z1n74A/24kStNT9QgylJHVjqgRpsQ==}
+
+  wcsize@1.0.0:
+    resolution: {integrity: sha512-80ziCk3Z+iLfhgAbMBMU+PjoSFi9dg0FIKYd9xRiF15wfwJlzxu1mdIUdIv9iE1gpkX/4hV2QBbkNlydXgEFMA==}
+
+  wcstring@2.1.1:
+    resolution: {integrity: sha512-81yoFUY/2Fw4RFzIkrlC47g7023/XkKofj62CNFT1kdZn6z7o2xhz8ffR7Wat76SuJTmrFNLmGDd7FLaZsIo5A==}
+
+snapshots:
+
+  ansi-regex@6.1.0: {}
+
+  emoji-regex@10.4.0: {}
+
+  get-east-asian-width@1.3.0: {}
+
+  string-width@7.2.0:
     dependencies:
-      emoji-regex: 8.0.0
-      is-fullwidth-code-point: 3.0.0
-      strip-ansi: 6.0.1
-    dev: false
+      emoji-regex: 10.4.0
+      get-east-asian-width: 1.3.0
+      strip-ansi: 7.1.0
 
-  /strip-ansi/6.0.1:
-    resolution: {integrity: sha512-Y38VPSHcqkFrCpFnQ9vuSXmquuv5oXOKpGeT6aGrr3o3Gc9AlVa6JBfUSOCnbxGGZF+/0ooI7KrPuUSztUdU5A==}
-    engines: {node: '>=8'}
+  strip-ansi@7.1.0:
     dependencies:
-      ansi-regex: 5.0.1
-    dev: false
+      ansi-regex: 6.1.0
 
-  /varsize-string/2.2.2:
-    resolution: {integrity: sha1-7xs7bHLbCDXqL4TN+R/sMMUgaIs=}
-    dev: false
+  varsize-string@2.2.2: {}
 
-  /wcsize/1.0.0:
-    resolution: {integrity: sha1-qKLhXmqKdHkdulgPaaV9J+hQ6h4=}
-    dev: false
+  wcsize@1.0.0: {}
 
-  /wcstring/2.1.1:
-    resolution: {integrity: sha1-3tUtdFycceJNCkidKCbSKjZe0Gc=}
+  wcstring@2.1.1:
     dependencies:
       varsize-string: 2.2.2
       wcsize: 1.0.0
-    dev: false

@@ -36,7 +36,7 @@
   },
   "homepage": "https://github.com/loveencounterflow/to-width",
   "dependencies": {
-    "string-width": "4.2.3",
+    "string-width": "7.2.0",
     "wcstring": "^2.1.1"
   }
 }
