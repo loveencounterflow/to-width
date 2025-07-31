@@ -5,10 +5,11 @@
 rpr                       = ( require 'util' ).inspect
 #...........................................................................................................
 # probes                    = require './probes'
-@_width_of_string         = require 'string-width'
+@_width_of_string         = ( require 'string-width' ).default
 @_Wcstring                = require 'wcstring'
 self                      = @
 ƒ                         = ( method ) -> method.bind self
+
 
 #-----------------------------------------------------------------------------------------------------------
 @to_width = ƒ ( text, width, settings ) ->
